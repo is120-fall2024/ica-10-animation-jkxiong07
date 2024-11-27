@@ -21,12 +21,12 @@
 
 .box.box-3 {
     position: relative;
-    animation-name: move;
+    animation-name: zig;
     animation-duration: 2s;
     animation-iteration-count: infinite;
 }
 
-@keyframes move {
+@keyframes zig {
     0% {
         left: 0;
     }
@@ -35,5 +35,55 @@
     }
     100% {
         left: 0;
+    }
+}
+
+aside {
+    position: absolute;
+    top: -100%;
+    animation-name: slide;
+    animation-delay: 2s;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: backwards;
+}
+
+@keyframes slide {
+    0% {
+        top: -100%;
+    }
+    50% {
+        top: 50%;
+    }
+    75% {
+        top: 50%;
+    }
+    100% {
+        top: 50%;
+    }
+}
+
+.box.box-4 {
+    background: #333;
+    transition: background 0.3s ease-in-out;
+}
+
+.box.box-4:hover{
+    background: linear-gradient(90deg, #f3ec78, #af4261);
+}
+
+.box.box-1 svg {
+    animation-name: rotate; 
+    animation-duration: 5s; 
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
     }
 }
